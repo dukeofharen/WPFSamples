@@ -1,0 +1,32 @@
+﻿<Window x:Class="URLShortener.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="URL Shortener" Height="280" Width="525"
+		ResizeMode="NoResize" Icon="1428948561_328008.ico">
+	<StackPanel Margin="10">
+		<TextBlock FontSize="30">URL Shortener</TextBlock>
+		
+		<Label Content="{StaticResource selectService}" Target="{Binding ElementName=services}" />
+		<ComboBox Name="services" />
+		
+		<Label Content="{StaticResource longUrl}" Target="{Binding ElementName=longUrl}" />
+		<TextBox Name="longUrl" KeyUp="longUrl_KeyUp" />
+		
+		<Button Name="shortenUrl" Content="{StaticResource shortenUrl}" MaxWidth="100" HorizontalAlignment="Left" Margin="0,10,0,0" Click="shortenUrl_Click" />
+		
+		<Label Name="shortUrlBlock" Margin="0,10,0,0" Visibility="Hidden">
+			<StackPanel>
+				<TextBlock>
+					<Hyperlink Name="shortenedUrl"  RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="">
+						<TextBlock Name="shortenedUrlText"></TextBlock>
+					</Hyperlink>
+				</TextBlock>
+				<TextBlock>
+					<Hyperlink Name="copyToClipboard" RequestNavigate="copyToClipboard_RequestNavigate" NavigateUri="">
+						<TextBlock Text="{StaticResource copyToClipboard}"></TextBlock>
+					</Hyperlink>
+				</TextBlock>
+			</StackPanel>
+		</Label>
+	</StackPanel>
+</Window>

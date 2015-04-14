@@ -1,0 +1,35 @@
+﻿<Window x:Class="Todo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{StaticResource appTitle}" Background="White" WindowState="Maximized"
+		Icon="1429024880_283038.ico" Closing="Window_Closing">
+	<DockPanel Margin="10" LastChildFill="True">
+		<TextBlock Text="{StaticResource appTitle}" FontSize="30" DockPanel.Dock="Top" />
+		<StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+			<Button Content="{StaticResource addItem}" Name="addItem" Padding="5" Margin="0,10,0,10" Click="addItem_Click" />
+			<ComboBox Name="categories" Width="200" Height="29" Margin="5,0,0,0" Padding="7" SelectionChanged="categories_SelectionChanged" />
+			<ComboBox Name="priorities" Width="200" Height="29" Margin="5,0,0,0" Padding="7" SelectionChanged="priorities_SelectionChanged" />
+			<StackPanel Orientation="Horizontal" Margin="10,15,0,0">
+				<CheckBox Name="openItems" Margin="0,0,5,0" Click="openItems_Click" />
+				<TextBlock Text="{StaticResource onlyShowOpen}" />
+			</StackPanel>
+		</StackPanel>
+		<ScrollViewer DockPanel.Dock="Bottom">
+			<StackPanel>
+				<Grid Name="todoItems">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+				</Grid>
+			</StackPanel>
+		</ScrollViewer>
+	</DockPanel>
+</Window>

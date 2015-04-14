@@ -2,3 +2,10 @@ URLShortener/URLShortener.Services/bin/*
 URLShortener/URLShortener.Services/obj/*
 URLShortener/URLShortener/bin/*
 URLShortener/URLShortener/obj/*
+
+Todo/Todo/bin/*
+Todo/Todo/obj/*
+Todo/Todo.Provider/bin/*
+Todo/Todo.Provider/obj/*
+
+*.gitignore

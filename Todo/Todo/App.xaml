@@ -1,0 +1,34 @@
+﻿<Application x:Class="Todo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+		<sys:String x:Key="appTitle">Todo List</sys:String>
+		<sys:String x:Key="addItem">Add</sys:String>
+		<sys:String x:Key="updateItem">Update</sys:String>
+		<sys:String x:Key="deleteItem">Delete</sys:String>
+		<sys:String x:Key="priority">Priority...</sys:String>
+		<sys:String x:Key="category">Category...</sys:String>
+		<sys:String x:Key="onlyShowOpen">Only show open items</sys:String>		
+		
+		<sys:String x:Key="formTitle">_Title</sys:String>
+		<sys:String x:Key="formDescription">_Description</sys:String>
+		<sys:String x:Key="formPriority">_Priority</sys:String>
+		<sys:String x:Key="formCategory">_Category</sys:String>
+		<sys:String x:Key="formDone">D_one</sys:String>
+		<sys:String x:Key="formSave">_Save</sys:String>
+
+		<sys:String x:Key="done">Done</sys:String>
+		<sys:String x:Key="title">Title</sys:String>
+		<sys:String x:Key="categoryHeader">Category</sys:String>
+		<sys:String x:Key="priorityHeader">Priority</sys:String>
+		<sys:String x:Key="datetime">Date/time added</sys:String>
+		<sys:String x:Key="actions">Actions</sys:String>
+
+		<sys:String x:Key="msgAreYouSure">Are you sure?</sys:String>
+		
+		<sys:String x:Key="errorFillInTitle">Please fill in a title</sys:String>
+		<sys:String x:Key="errorFillInCategory">Please fill in a category</sys:String>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="Todo.ItemForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="350" Width="300" ResizeMode="NoResize"
+		Icon="1429024880_283038.ico">
+	<StackPanel Margin="10">
+		<Label Target="{Binding ElementName=title}" Content="{StaticResource formTitle}" />
+		<TextBox Name="title" />
+
+		<Label Target="{Binding ElementName=description}" Content="{StaticResource formDescription}" />
+		<TextBox Name="description" Height="50" TextWrapping="Wrap" AcceptsReturn="true"
+		ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+		
+		<Label Target="{Binding ElementName=priority}" Content="{StaticResource formPriority}" />
+		<ComboBox Name="priority" />
+
+		<Label Target="{Binding ElementName=category}" Content="{StaticResource formCategory}" />
+		<TextBox Name="category" />
+
+		<Label Target="{Binding ElementName=done}" Content="{StaticResource formDone}" />
+		<CheckBox Name="done" />
+		
+		<Button Name="save" Content="{StaticResource formSave}" Click="save_Click" Margin="0,10,0,0" Padding="5" />
+	</StackPanel>
+</Window>
